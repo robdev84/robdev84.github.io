@@ -20,10 +20,15 @@
     </ul>
 </div>
 
-<p>The West Chicago Fire Protection District is offering free high-visibility address signs for unincorporated addresses. The installation takes place in phases, and you can view the estimated installation date for your neighborhood. To speed up the install process, you can authorize the installation ahead of time with our webform. If you have special instructions that you want followed, please indicate that in the comments box, and we will do our best to accomodate them.
-    For more information, please visit our Projects page.</p>
+<p id="signsinfo">The West Chicago Fire Protection District is offering free high-visibility address signs for unincorporated addresses. The fire department will be going around to each neighborhood to install the signs. To speed up the installation process, you can authorize the installation online with our webform. If you currently have one of the older fire signs posted we will simply replace with a new one and you do not need to contact us. 
 
-<fieldset>
+Additionally, if you have special instructions that you want followed, please indicate that in the comments box, and the fire department will their best to accomodate them. Without prior authorization, the fire department will visit each residence to obtain permission. 
+
+For more information on the unincorporated address signs, please visit our <a href="projects.html">Projects Page</a>.</p>
+
+    <form action="mailto:robertn84@gmail.com" method="post" enctype="text/plain">
+        
+<fieldset id="fieldset">
     <legend>Contact Information</legend>
     First name:<br>
     <input type="text" name="firstname" value="First Name">
@@ -52,8 +57,24 @@
     <input type="tel" name="telephone" value="Telephone Number">
     <br>
     <br>
-
-    <textarea name="message" rows="10" cols="30">Enter your comments here.
+ 
+    <input type="radio" name="authorization" value="authorization">
+    I authorize the West Chicago Fire Protection District to install a free address sign on my mailbox.
+    <br>
+    <br>
+    <textarea name="message" rows="10" cols="30">Enter any comments about the installation here.
         </textarea>	
         <br>
+
+        <br>
+        <input type="submit" value="Submit">  
     </fieldset>
+
+    </form>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"><img src="img/sign3.jpg"></div>
+            <div class="col-md-4 col-md-offset-2"><img src="img/sign2.jpg"></div>
+        </div>
+    </div>
