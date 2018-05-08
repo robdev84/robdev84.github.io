@@ -7,10 +7,8 @@ $(document).ready(function() {
                     $.each(this, function(key, value) {
                         $("main").text("");
                         $("main").append(
-                            "<h1>" + value.dates + "</h1>" +
-                            "<h2>" + value.street + "</h2>" +
-                            // "<h2>" + value.month + "<br>" + value.speaker + "</h2>" +
-                            // "<p>" + value.text + "</p>"
+                            "<h2>" + value.dates + "</h2>" +
+                            "<h2>" + value.street + "</h2>" 
                         );
                     });
                 });
