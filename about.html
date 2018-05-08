@@ -22,41 +22,6 @@
     </ul>
 </div>
 
-<h2>Who we are</h2>
-<ul id="board"></ul>
-<script>
-    function createNode(element) {
-    return document.createElement(element);
-    }
-    
-    function append(parent, el) {
-    return parent.appendChild(el);
-    }
-    
-    const ul = document.getElementById('board');
-    const url = 'https://randomuser.me/api/?results=10';
-    fetch(url)
-    .then((resp) => resp.json())
-    .then(function(data) {
-    let authors = data.results;
-    return authors.map(function(author) {
-    let li = createNode('li'),
-    img = createNode('img'),
-    span = createNode('span');
-    img.src = author.picture.medium;
-    span.innerHTML = `${author.name.first} ${author.name.last}`;
-    append(li, img);
-    append(li, span);
-    append(ul, li);
-        })
-    })
-    .catch(function(error) {
-    console.log(error);
-    });   
-</script>
-
-   <br>
-<!-- get the little files that you can click to expand and collapse to make this page more organized -->
 
         <h3>What is the Foundation for Fire and Life Safety?</h3>
         <p>The Foundation for Fire and Life Safety is an independent, not-for-profit 501(c)(3) organization dedicated to supporting community projects that improve fire safety and awareness in the community. The Foundation works closely with the West Chicago Fire Protection District.</p>
