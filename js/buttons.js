@@ -5,8 +5,8 @@ $(document).ready(function() {
             $.getJSON(fileName, function(data) {
                 $.each(data, function() {
                     $.each(this, function(key, value) {
-                        $("main").text("");
-                        $("main").append(
+                        $("#main").text("");
+                        $("#main").append(
                             "<h2>" + value.dates + "</h2>" +
                             "<h2>" + value.street + "</h2>"
                         );
