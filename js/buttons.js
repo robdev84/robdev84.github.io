@@ -8,7 +8,8 @@ $(document).ready(function() {
                         $("#main").text("");
                         $("#main").append(
                             "<h2>" + value.dates + "</h2>" +
-                            "<h2>" + value.street + "</h2>"
+                            "<h2>" + value.street + "</h2>" +
+                            "<h2>" + value.range + "</h2>"
                         );
                     });
                 });
