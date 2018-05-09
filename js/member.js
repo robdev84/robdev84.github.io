@@ -3,7 +3,7 @@ $(document).ready(function() {
 	$(":text, :password").after("<span></span>");
 	
 	// move focus to first text box
-	$("#email").focus();
+	$("#first_name").focus();
 	
 	// put today's date in the start_date text box
 	var today = new Date();
@@ -19,37 +19,6 @@ $(document).ready(function() {
 	$("#member_form").submit(
 		function(event) {
 			var isValid = true;
-			
-			// validate the email entry with a regular expression
-			var emailPattern = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b/;
-			var email = $("#email").val();
-			if (email == "") { 
-				$("#email").next().text("This field is required.");
-				isValid = false;
-			} else if ( !emailPattern.test(email) ) {
-				$("#email").next().text("Must be a valid email address.");
-				isValid = false;
-			} else {
-				$("#email").next().text("");
-			} 
-			// validate the password entry (regular expression)
-			var address = $("#address").val();
-			if ( address.length != 5) {
-				$("#address").next().text("Must be an unincorporated address.");
-				isValid = false;
-			} else {
-				$("#address").next().text("");
-			}
-			// validate the verify entry
-			if ($("#verify").val() == "") { 
-				$("#verify").next().text("This field is required.");
-				isValid = false; 
-			} else if ($("#verify").val() !== $("#password").val() ) { 
-				$("#verify").next().text("Must equal first password entry.");
-				isValid = false;
-			} else {
-				$("#verify").next().text("");
-			}
 			
 			// validate the first name entry
 			var firstName = $("#first_name").val().trim();
@@ -70,30 +39,30 @@ $(document).ready(function() {
 			else {
 				$("#last_name").val(lastName);
 				$("#last_name").next().text("");
-            }
-            
-            // validate the street name entry
-			var streetName = $("#street_name").val().trim();
-			if (streetName == "") {
-				$("#street_name").next().text("This field is required.");
+			}
+
+			// validate the address entry (regular expression)
+			var address = $("#address").val().trim();
+			if (address == "") {
+				$("#address").next().text("This field is required.");
 				isValid = false;
 			} 
 			else {
-				$("#street_name").val(firstName);
-                $("#street_name").next().text("");
-            }
+				$("#address").val(address);
+				$("#address").next().text("");
+			}
 
-            // validate the city entry
-			var streetName = $("#city").val().trim();
-			if (streetName == "") {
+			// validate the city entry (regular expression)
+			var city = $("#city").val().trim();
+			if (city == "") {
 				$("#city").next().text("This field is required.");
 				isValid = false;
 			} 
 			else {
-				$("#city").val(firstName);
-                $("#city").next().text("");
-            }
-
+				$("#city").val(city);
+				$("#city").next().text("");
+			}
+			
 			// validate the state entry
 			$("#state").next().text("");
 			
@@ -110,6 +79,20 @@ $(document).ready(function() {
 			else {
 				$("#zip").next().text("");
 			}
+
+			// validate the email entry with a regular expression
+			var emailPattern = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b/;
+			var email = $("#email").val();
+			if (email == "") { 
+				$("#email").next().text("This field is required.");
+				isValid = false;
+			} else if ( !emailPattern.test(email) ) {
+				$("#email").next().text("Must be a valid email address.");
+				isValid = false;
+			} else {
+				$("#email").next().text("");
+			} 
+
 			// validate the phone number (regular expression)
 			if ($("#phone").val() == "") { 
 				$("#phone").next().text("This field is required.");
@@ -118,7 +101,7 @@ $(document).ready(function() {
 				$("#phone").next().text("");
 			}
 			
-			// validate the requested start date (regular expression)
+			// validate the date (regular expression)
 			$("#start_date").next().text("");
 			
 			// prevent the submission of the form if any entries are invalid 

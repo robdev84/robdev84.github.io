@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Clean up and improve site -->
 <head>
 	<meta charset="utf-8">
-	<title>Signs</title>
+    <title>Signs</title>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
     <script type="text/javascript" src="js/buttons.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script src="member.js"></script>
+    <script src="js/member.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">  
     <link rel="stylesheet" href="css/site.css">
 </head>
@@ -41,51 +41,62 @@ For more information on the unincorporated address signs, please visit our <a hr
 
     </div>
 </div>
+<br>
+<br>
+<main>
+        <h3>Signup for your free, unincorporated address sign by filling out the form below.</h3>
+        <form action="register.html" method="get"
+            name="member_form" id="member_form">
+            <fieldset>
+                <legend>Resident Information</legend>
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name"><br>
 
-        <main>
-            <h1>Signup for your free, unincorporated address sign using the form</h1>
-            <form action="register.html" method="get"
-                name="member_form" id="member_form">
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name"><br>
+
+                <label for="address">Address:</label>
+                <input type="address" id="address" name="address" placeholder="Must be a rural address" ><br>     
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city"><br>
                 
-                <fieldset>
-                    <legend>Resident Information</legend>
-                    <label for="first_name">First Name:</label>
-                    <input type="text" id="first_name" name="first_name"><br>
-                    <label for="last_name">Last Name:</label>
-                    <input type="text" id="last_name" name="last_name"><br>
-                    <label for="address">Street Number:</label>
-                    <input type="address" id="address" name="address" placeholder="Must be an unincorporated address" ><br>
-                    <label for="street_name">Street Name:</label>
-                    <input type="text" id="street_name" name="street_name"><br>
-                    <label for="city">City:</label>
-                    <input type="text" id="city" name="city"><br>
-                    <label for="state">State:</label>
-                    <input type="text" id="state" name="state" placeholder="2-character code"><br>
-                    <label for="zip">ZIP Code:</label>
-                    <input type="text" id="zip" name="zip" placeholder="99999 or 99999-9999"><br>
-                    <label for="phone">Phone Number:</label>
-                    <input type="text" id="phone" name="phone" placeholder="999-999-9999"><br>
-                    <label for="email">Email Address:</label>
-                    <input type="text" id="email" name="email"><br>
-                    <label for="start_date">Today's Date:</label>
-                    <input type="text" id="start_date" name="start_date"><br>
-                </fieldset>
-                <fieldset id="buttons">
-                    <legend>Submit Your Request</legend>
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" placeholder="2-character code"><br>
+                
+                <label for="zip">ZIP Code:</label>
+                <input type="text" id="zip" name="zip" placeholder="99999 or 99999-9999"><br>
+                
+                <label for="email">Email Address:</label>
+                <input type="text" id="email" name="email"><br>
 
-                    <textarea name="message" rows="10" cols="30">Enter any comments about the installation here.</textarea>	
-                        <br>
-                        <br>
-                    <input type="radio" name="authorization" value="authorization">
-                        I authorize the West Chicago Fire Protection District to install a free address sign on my mailbox.
-                        <br>
-                        <br>
-                    <label>&nbsp;</label>
-                    <input type="submit" id="submit" name="submit" value="Submit">
-                    <input type="reset" id="reset" name="reset" value="Reset"><br>
-                </fieldset>
-            </form>
-        </main>
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" placeholder="999-999-9999"><br>
+                
+                <label for="start_date">Today's Date:</label>
+                <input type="text" id="start_date" name="start_date"><br>
+            </fieldset>
+
+            <fieldset id="buttons">
+                <legend>Submit Your Authorization</legend>
+                <label>&nbsp;</label>
+
+                <textarea name="message" rows="10" cols="30"></textarea>	
+                <br>
+                <br>
+                <input type="radio" name="authorization" value="authorization">
+                I authorize the West Chicago Fire Protection District to install a free address sign on my mailbox.
+                <br>
+                <br>
+
+
+                <input type="submit" id="submit" name="submit" value="Submit">
+                <input type="reset" id="reset" name="reset" value="Reset"><br>
+            </fieldset>
+        </form>
+    </main>
+
+
 
          <!-- <form action="mailto:robertn84@gmail.com" method="post" enctype="text/plain"> -->
 
