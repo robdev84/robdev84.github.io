@@ -108,6 +108,12 @@ $(document).ready(function() {
 			if (isValid == false) {
 				event.preventDefault();				
 			}
+
+			// make sure radio button is selected
+			if (!$("input[name='authorization']:checked").val()) {
+				alert('Nothing is checked!');
+				return false;
+			 }
 		} // end function
 	);	// end submit
 }); // end ready
