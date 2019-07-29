@@ -57,6 +57,10 @@
     font-size: 1.5em;
 }
 
+#center_it {
+    text-align: center;
+}
+
 #mainphotos {
     text-align: center;
 }
